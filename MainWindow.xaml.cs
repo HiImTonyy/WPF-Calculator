@@ -106,6 +106,15 @@ namespace LearningWPF
             answerLabel.Content = "0";
         }
 
+        private void dotButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (answerLabel.Content.ToString().Contains("."))
+            {
+                // DON'T ADD SHIT HERE.
+            }
+            else { answerLabel.Content = $"{answerLabel.Content}."; }
+        }
+
         private void PlusMinusButton_Click(object sender, RoutedEventArgs e)
         {
             if(double.TryParse(answerLabel.Content.ToString(), out numberPressed))
