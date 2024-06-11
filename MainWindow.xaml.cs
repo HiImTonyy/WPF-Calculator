@@ -22,7 +22,6 @@ namespace LearningWPF
         {
             InitializeComponent();
 
-            plusMinusButton.Click += PlusMinusButton_Click;
             caButton.Click += CaButton_Click;
             percentButton.Click += PercentButton_Click;
             equalButton.Click += EqualButton_Click;
@@ -87,7 +86,13 @@ namespace LearningWPF
                         break;
                 }
 
-                answerLabel.Content = answer.ToString();
+                if (answer == Double.PositiveInfinity || answer == Double.NegativeInfinity)
+                {
+                    answerLabel.Content = "HOGWASH!";
+                    MessageBox.Show("YEAH, THAT'S RIGHT! CAN'T DO INFINITES HERE BUD.", "HOGWASH ERROR", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    answerLabel.Content = "0";
+                }
+                else { answerLabel.Content = answer.ToString(); }
             }
 
         }
@@ -113,15 +118,6 @@ namespace LearningWPF
                 // DON'T ADD SHIT HERE.
             }
             else { answerLabel.Content = $"{answerLabel.Content}."; }
-        }
-
-        private void PlusMinusButton_Click(object sender, RoutedEventArgs e)
-        {
-            if(double.TryParse(answerLabel.Content.ToString(), out numberPressed))
-            {
-                numberPressed = numberPressed * -1;
-                answerLabel.Content = numberPressed.ToString();
-            }
         }
     }
 

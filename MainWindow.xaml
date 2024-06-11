@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:LearningWPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="666" Width="444">
-    <Grid Margin="11.11" Background="LightSteelBlue">
+
+    <Grid Margin="11.11" Background="GhostWhite">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -28,7 +29,7 @@
                FontSize="75"
                Grid.ColumnSpan="4"
                FontWeight="DemiBold"
-               Foreground="DarkSlateBlue"/>
+               Foreground="DarkViolet"/>
         <Button x:Name="caButton"
                 Click="NumberButton_Click"
                 Content="CA"
@@ -36,7 +37,8 @@
                 Margin="8"
                 FontWeight="Bold"
                 FontSize="18"
-                Foreground="SteelBlue"/>
+                Foreground="DarkBlue"
+                Background="DeepSkyBlue"/>
         <Button x:Name="plusMinusButton"
                 Content="+/-"
                 Grid.Row="1"
@@ -44,7 +46,8 @@
                 Margin="8"
                 FontWeight="Bold"
                 FontSize="18"
-                Foreground="SteelBlue"/>
+                Foreground="DarkBlue"
+                Background="DeepSkyBlue"/>
         <Button x:Name="percentButton" 
                 Content="%"
                 Grid.Row="1"
@@ -52,7 +55,8 @@
                 Margin="8"
                 FontWeight="Bold"
                 FontSize="25"
-                Foreground="SteelBlue"/>
+                Foreground="DarkBlue"
+                Background="DeepSkyBlue"/>
         <Button x:Name="divideButton" 
                 Click="OperationButton_Click"
                 Content="/"
@@ -61,7 +65,7 @@
                 Margin="8"
                 FontWeight="Bold"
                 FontSize="25"
-                Foreground="SteelBlue"/>
+                Style="{StaticResource OperationButtons}"/>
         <Button x:Name="sevenButton" 
                 Click="NumberButton_Click"
                 Content="7"
@@ -69,7 +73,7 @@
                 Margin="8"
                 FontWeight="Bold"
                 FontSize="18"
-                Foreground="SteelBlue"/>
+                Style="{StaticResource NumberedButtons}"/>
         <Button x:Name="eightButton" 
                 Click="NumberButton_Click"
                 Content="8"
@@ -78,7 +82,7 @@
                 Margin="8"
                 FontWeight="Bold"
                 FontSize="18"
-                Foreground="SteelBlue"/>
+                Style="{StaticResource NumberedButtons}"/>
         <Button x:Name="nineButton" 
                 Click="NumberButton_Click"
                 Content="9"
@@ -87,7 +91,7 @@
                 Margin="8"
                 FontWeight="Bold"
                 FontSize="18"
-                Foreground="SteelBlue"/>
+                Style="{StaticResource NumberedButtons}"/>
         <Button x:Name="multiplyButton" 
                 Click="OperationButton_Click"
                 Content="*"
@@ -96,7 +100,7 @@
                 Margin="8"
                 FontWeight="Bold"
                 FontSize="28"
-                Foreground="SteelBlue"/>
+                Style="{StaticResource OperationButtons}"/>
         <Button x:Name="fourButton" 
                 Click="NumberButton_Click"
                 Content="4"
@@ -104,7 +108,7 @@
                 Margin="8"
                 FontWeight="Bold"
                 FontSize="18"
-                Foreground="SteelBlue"/>
+                Style="{StaticResource NumberedButtons}"/>
         <Button x:Name="fiveButton" 
                 Click="NumberButton_Click"
                 Content="5"
@@ -113,7 +117,7 @@
                 Margin="8"
                 FontWeight="Bold"
                 FontSize="18"
-                Foreground="SteelBlue"/>
+                Style="{StaticResource NumberedButtons}"/>
         <Button x:Name="sixButton" 
                 Click="NumberButton_Click"
                 Content="6"
@@ -122,7 +126,7 @@
                 Margin="8"
                 FontWeight="Bold"
                 FontSize="18"
-                Foreground="SteelBlue"/>
+                Style="{StaticResource NumberedButtons}"/>
         <Button x:Name="minusButton" 
                 Click="OperationButton_Click"
                 Content="-"
@@ -131,7 +135,7 @@
                 Margin="8"
                 FontWeight="Bold"
                 FontSize="38"
-                Foreground="SteelBlue"/>
+                Style="{StaticResource OperationButtons}"/>
         <Button x:Name="oneButton" 
                 Click="NumberButton_Click"
                 Content="1"
@@ -139,7 +143,7 @@
                 Margin="8"
                 FontWeight="Bold"
                 FontSize="18"
-                Foreground="SteelBlue"/>
+                Style="{StaticResource NumberedButtons}"/>
         <Button x:Name="threeButton" 
                 Click="NumberButton_Click"
                 Content="3"
@@ -148,7 +152,7 @@
                 Margin="8"
                 FontWeight="Bold"
                 FontSize="18"
-                Foreground="SteelBlue"/>
+                Style="{StaticResource NumberedButtons}"/>
         <Button x:Name="twoButton" 
                 Click="NumberButton_Click"
                 Content="2"
@@ -157,7 +161,7 @@
                 Margin="8"
                 FontWeight="Bold"
                 FontSize="18"
-                Foreground="SteelBlue"/>
+                Style="{StaticResource NumberedButtons}"/>
         <Button x:Name="plusButton" 
                 Click="OperationButton_Click"
                 Content="+"
@@ -166,7 +170,7 @@
                 Margin="8"
                 FontWeight="Bold"
                 FontSize="28"
-                Foreground="SteelBlue"/>
+                Style="{StaticResource OperationButtons}"/>
         <Button x:Name="zeroButton" 
                 Click="NumberButton_Click"
                 Content="0"
@@ -177,7 +181,7 @@
                 Width="185"
                 Grid.ColumnSpan="2"
                 HorizontalAlignment="left"
-                Foreground="SteelBlue"/>
+                Style="{StaticResource NumberedButtons}"/>
         <Button x:Name="dotButton" 
                 Click="dotButton_Click"
                 Content="."
@@ -186,7 +190,7 @@
                 Margin="8"
                 FontWeight="Bold"
                 FontSize="38"
-                Foreground="SteelBlue"/>
+                Style="{StaticResource NumberedButtons}"/>
         <Button x:Name="equalButton" 
                 Content="="
                 Grid.Row="5"
@@ -194,6 +198,6 @@
                 Margin="8"
                 FontWeight="Bold"
                 FontSize="28"
-                Foreground="SteelBlue"/>
+                Style="{StaticResource OperationButtons}"/>
     </Grid>
 </Window>

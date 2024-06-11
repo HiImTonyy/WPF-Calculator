@@ -4,6 +4,24 @@
              xmlns:local="clr-namespace:LearningWPF"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <SolidColorBrush x:Key="numberedBackgroundColors" Color="DodgerBlue"/>
+        <SolidColorBrush x:Key="numberedForegroundColors" Color="DarkBlue"/>
+        <SolidColorBrush x:Key="operatorBackgroundColors" Color="DarkMagenta"/>
+        <SolidColorBrush x:Key="operatorForegroundColors" Color="DeepSkyBlue"/>
+
+        <!--EXPLICIT VERSION!
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Black"/>
+        </Style>-->
+
+        <Style TargetType="Button" x:Key="NumberedButtons">
+            <Setter Property="Background" Value="{StaticResource numberedBackgroundColors}"/>
+            <Setter Property="Foreground" Value="{StaticResource numberedForegroundColors}"/>
+        </Style>
+        
+        <Style TargetType="Button" x:Key="OperationButtons">
+            <Setter Property="Background" Value="{StaticResource operatorBackgroundColors}"/>
+            <Setter Property="Foreground" Value="{StaticResource operatorForegroundColors}"/>
+        </Style>
     </Application.Resources>
 </Application>
